@@ -1,0 +1,43 @@
+//
+// Adding support for inline responsive utilities.
+// These can be removed or migrated in the future if Bootstrap 3 implements inline responsive utilities.
+// --------------------------------------------------
+
+.hidden-xs-inline,
+.visible-xs-inline,
+.hidden-sm-inline,
+.visible-sm-inline,
+.hidden-md-inline,
+.visible-md-inline,
+.hidden-lg-inline,
+.visible-lg-inline {
+	display: inline-block;
+}
+
+/* Extra small devices (phones, up to 480px) */
+@media (max-width: @screen-xs-max) {
+	.hidden-xs-inline {
+		display: none !important;
+	}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: @screen-sm-max) {
+	.hidden-sm-inline {
+		display: none !important;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: @screen-md-max) {
+	.hidden-md-inline {
+		display: none !important;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg) {
+	.hidden-lg-inline {
+		display: none !important;
+	}
+}

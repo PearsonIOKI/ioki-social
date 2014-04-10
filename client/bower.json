@@ -1,0 +1,20 @@
+{
+  "name": "IOKI Social front-end vendors",
+  "version": "0.0.1",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "~1.2.11",
+    "angular": "~1.2.11",
+    "requirejs-domready": "~2.0.1",
+    "requirejs": "~2.1.10",
+    "angular-mocks": "~1.2.11"
+  }
+}

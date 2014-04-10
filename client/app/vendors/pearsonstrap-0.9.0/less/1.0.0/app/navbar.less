@@ -1,0 +1,35 @@
+//
+// Navbar
+// --------------------------------------------------
+.application .navbar {
+	padding:0 @grid-gutter-width/2;
+	@media (max-width: @screen-xs-max) {
+		padding: 0 @grid-gutter-width/2 0 0;
+	}
+	nav {
+		float: right;
+	}
+	.navbar-nav {
+		> li {
+			display:inline-block;
+		}
+		/* Small devices (up to 767px) */
+		@media (max-width: @screen-xs-max) {
+			margin:5px -15px;
+		}
+		/* Devices above tablets (768px and up) */
+		@media (min-width: @grid-float-breakpoint) {
+			float: none;
+		    > li {
+		    	float: none;
+		    }
+		}
+	}
+}
+.application .navbar-collapse {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+header.navbar {
+  width: 100%;
+}

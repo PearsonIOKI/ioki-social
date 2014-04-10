@@ -1,0 +1,140 @@
+.pearson-bar-blue, .pearson-bar-green, .pearson-bar-orange, .pearson-bar-purple {
+	height: @navbar-height;
+	> .always-learning {
+		margin:0 20px;
+	}
+	> .pearson {
+		margin:0 20px;
+	}
+}
+.pearson-bar-blue {
+	background-color:@pearsonBlue;
+}
+.pearson-bar-green {
+	background-color:@pearsonGreen;
+}
+.pearson-bar-orange {
+	background-color:@pearsonOrange;
+}
+.pearson-bar-purple {
+	background-color:@pearsonPurple;
+}
+.container-full {
+	margin: 0 auto;
+	width: 100%;
+}
+.container-main, .container-signin, .container-signin-complex {
+	background: @white;
+	padding: 10px @grid-gutter-width @grid-gutter-width @grid-gutter-width;
+	margin-top: @grid-gutter-width;
+	float:left; /* fixes issues when the grid column size is 12 */
+	.border-radius(6px);
+	.box-sizing(border-box);
+	.box-shadow(0 1px 4px rgba(0,0,0,.065));
+}
+.container-nav {
+	margin-top: @grid-gutter-width;
+	padding: 0;
+}
+.container-signin {
+	padding: @grid-gutter-width;
+	margin-bottom: @grid-gutter-width;
+}
+.container-signin-complex {
+	padding: @grid-gutter-width;
+}
+
+//
+// Breadcrumbs
+// --------------------------------------------------
+.breadcrumb {
+	margin: @grid-gutter-width 0 0 0;
+	background-color: #f5f5f5;
+	.border-radius(@border-radius-base);
+	> li {
+		display: inline-block;
+		.ie7-inline-block();
+		text-shadow: 0 1px 0 @white;
+    	> .divider {
+    		/*padding: 0 5px;*/
+    		padding:0;
+    		color: #ccc;
+    	}
+    	> a {
+    		color:@pearsonBlue;
+    	}
+  	}
+}
+
+/* Extra small devices (phones, up to 480px) */
+@media (max-width: @screen-xs-max) {
+	// Adding offset, push, and pull classes that are not part of Bootstrap.
+	
+	// Push and pull columns for source order changes
+	.col-xs-push-1  { left: percentage((1 / @grid-columns)); }
+	.col-xs-push-2  { left: percentage((2 / @grid-columns)); }
+	.col-xs-push-3  { left: percentage((3 / @grid-columns)); }
+	.col-xs-push-4  { left: percentage((4 / @grid-columns)); }
+	.col-xs-push-5  { left: percentage((5 / @grid-columns)); }
+	.col-xs-push-6  { left: percentage((6 / @grid-columns)); }
+	.col-xs-push-7  { left: percentage((7 / @grid-columns)); }
+	.col-xs-push-8  { left: percentage((8 / @grid-columns)); }
+	.col-xs-push-9  { left: percentage((9 / @grid-columns)); }
+	.col-xs-push-10 { left: percentage((10/ @grid-columns)); }
+	.col-xs-push-11 { left: percentage((11/ @grid-columns)); }
+	
+	.col-xs-pull-1  { right: percentage((1 / @grid-columns)); }
+	.col-xs-pull-2  { right: percentage((2 / @grid-columns)); }
+	.col-xs-pull-3  { right: percentage((3 / @grid-columns)); }
+	.col-xs-pull-4  { right: percentage((4 / @grid-columns)); }
+	.col-xs-pull-5  { right: percentage((5 / @grid-columns)); }
+	.col-xs-pull-6  { right: percentage((6 / @grid-columns)); }
+	.col-xs-pull-7  { right: percentage((7 / @grid-columns)); }
+	.col-xs-pull-8  { right: percentage((8 / @grid-columns)); }
+	.col-xs-pull-9  { right: percentage((9 / @grid-columns)); }
+	.col-xs-pull-10 { right: percentage((10/ @grid-columns)); }
+	.col-xs-pull-11 { right: percentage((11/ @grid-columns)); }
+	
+	// Offsets
+	.col-xs-offset-1  { margin-left: percentage((1 / @grid-columns)); }
+	.col-xs-offset-2  { margin-left: percentage((2 / @grid-columns)); }
+	.col-xs-offset-3  { margin-left: percentage((3 / @grid-columns)); }
+	.col-xs-offset-4  { margin-left: percentage((4 / @grid-columns)); }
+	.col-xs-offset-5  { margin-left: percentage((5 / @grid-columns)); }
+	.col-xs-offset-6  { margin-left: percentage((6 / @grid-columns)); }
+	.col-xs-offset-7  { margin-left: percentage((7 / @grid-columns)); }
+	.col-xs-offset-8  { margin-left: percentage((8 / @grid-columns)); }
+	.col-xs-offset-9  { margin-left: percentage((9 / @grid-columns)); }
+	.col-xs-offset-10 { margin-left: percentage((10/ @grid-columns)); }
+	.col-xs-offset-11 { margin-left: percentage((11/ @grid-columns)); }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm) {
+	.container-signin-complex {
+		width:345px;
+		margin-right: @grid-gutter-width;
+		margin-bottom: @grid-gutter-width;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md) {
+	.container-main {
+		padding: 0 @grid-gutter-width @grid-gutter-width @grid-gutter-width;	
+	}
+	.container-signin-complex {
+		width:293px;
+		margin-right: @grid-gutter-width;
+		margin-bottom: @grid-gutter-width;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg) {
+	.container-signin-complex {
+		width:360px;
+		margin-right: @grid-gutter-width;
+		margin-bottom: @grid-gutter-width;
+	}
+}

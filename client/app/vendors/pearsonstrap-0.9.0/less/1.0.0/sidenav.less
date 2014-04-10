@@ -1,0 +1,93 @@
+/*
+ * Side navigation
+ *
+ * Scrollspy and affixed enhanced navigation to highlight sections and secondary sections of docs content.
+ */
+
+/* By default it's not affixed in mobile views, so undo that */
+.sidebar.affix {
+	position: static;
+}
+.sidenav {
+	margin: @grid-gutter-width 0;
+	padding: 0;
+	background: @white;
+  	.border-radius(6px);
+  	.box-shadow(0 1px 4px rgba(0,0,0,.065));
+}
+.sidebar {
+	/* All levels of nav */
+	.icon-chevron-right {
+  		float: right;
+		margin-top: 2px;
+		margin-right: -6px;
+		color: @pearsonBlue5;
+		opacity: 1;
+	}
+	.nav > li > a {
+		display: block;
+		margin: 0 0 -1px;
+		padding: 8px 14px;
+		border: 1px solid #e5e5e5;
+		color: @pearsonBlue5;
+	}
+	.nav > li:first-child > a {
+		.border-top-radius(6px);
+	}
+	.nav > li:last-child > a {
+		.border-bottom-radius(6px);
+	}
+	.nav > li > a:hover {
+  		background-color: #f5f5f5;
+  		color: @pearsonBlue3;
+  		.icon-chevron-right {
+			color: @pearsonBlue3;
+			opacity: 1;
+		}
+	}
+	.nav > .active > a, .nav > .active > a:hover, .nav > .active > a:focus  {
+		position: relative;
+		background-color: @pearsonBlue3;
+		z-index: 2;
+		padding: 9px 15px;
+		border: 0;
+		color: @white;
+		text-shadow: 0 1px 0 rgba(0,0,0,.15);
+		.box-shadow('inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1)');
+		.icon-chevron-right {
+			color: @white;
+			opacity: 1;
+		}
+	}
+}
+
+/* Show and affix the side nav when space allows it */
+@media screen and (min-width: @screen-md) {
+	/* Widen the fixed sidebar */
+	.sidebar.affix, .sidebar.affix-bottom {
+		width: 213px;
+	}
+	.sidebar.affix {
+		position: fixed; /* Undo the static from mobile first approach */
+		top: 80px;
+	}
+	.sidebar.affix-bottom {
+		position: absolute; /* Undo the static from mobile first approach */
+	}
+	.sidebar.affix-bottom .sidenav, .sidebar.affix .sidenav {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.sidenav {
+		width:198px; /* this size will leave a 30px gutter */
+	}
+}
+@media screen and (min-width: @screen-lg) {
+	/* Widen the fixed sidebar again */
+	.sidebar.affix-bottom, .sidebar.affix {
+		width: 263px;
+	}
+	.sidenav {
+		width:248px; /* this size will leave a 30px gutter */
+	}
+}

@@ -1,0 +1,88 @@
+//
+// Navbar
+// --------------------------------------------------
+
+.pearson-brand {
+	float: left;
+	display: block;
+	width:115px;
+	height:50px;
+	padding:0;
+	margin:0 20px 0 0;
+	font-size: 20px;
+	font-weight: 200;
+	color: @navbar-default-brand-color;
+	.img-retina('../images/pearson.png','../images/pearson@2x.png',115px,100px);
+	//Hide text but make it accessible
+	text-indent: 200%;
+	white-space: nowrap;
+	overflow: hidden;
+	&:hover {
+		background-position:0 -50px;
+		text-decoration: none;
+	}
+	&:focus {
+		text-decoration: none;
+	}
+}
+// Navigation button displayed in small/medium viewport sizes.
+.navbar-default {
+	.navbar-toggle {
+		margin: 8px 10px;
+		float:left;
+		@shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
+		.box-shadow(@shadow);
+		#gradient > .vertical(@start-color: @btn-primary-bg; @end-color: darken(@btn-primary-bg, 10%));
+		// Reset the shadow
+		&:active, &.active {
+			.box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+		}
+		
+		// Hover/focus state
+		&:hover, &:focus {
+			text-decoration: none;
+			background-position: 0 -15px;
+			
+			// transition is only when going to hover/focus, otherwise the background
+			// behind the gradient (there for IE<=9 fallback) gets mismatched
+			.transition(background-position .1s linear);
+		}
+	    .icon-bar {
+	    	background-color: @navbar-default-toggle-icon-bar-bg;
+	    }
+	}
+}
+// Basic navbar
+/*.navbar {
+	#gradient > .vertical(@start-color: @navbar-default-bg; @end-color: darken(@navbar-default-bg, 6%););
+	border-radius: @navbar-border-radius;
+	@shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);
+	.box-shadow(@shadow);
+	
+	.navbar-nav > .active > a {
+		//background-color: @navbar-default-bg;
+	}
+}
+.navbar-brand, .navbar-nav > li > a {
+	text-shadow: 0 1px 0 rgba(255,255,255,.25);
+}*/
+
+// Inverted navbar
+/*.navbar-inverse {
+	#gradient > .vertical(@start-color: lighten(@navbar-inverse-bg, 10%); @end-color: @navbar-inverse-bg;);
+	
+	.navbar-nav > .active > a {
+		background-color: @navbar-inverse-bg;
+	}
+	
+	.navbar-brand, .navbar-nav > li > a {
+		text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+	}
+}*/
+
+// Undo rounded corners in static and fixed navbars
+/*.navbar-static-top,
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+	border-radius: 0;
+}*/

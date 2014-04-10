@@ -1,0 +1,39 @@
+//Loading animation
+.loading {
+	text-align:center;
+	font-size: 4em;
+}
+.ie7 .loading > .icon-spinner, .ie8 .loading > .icon-spinner, .ie9 .loading > .icon-spinner {
+	background: url(../images/loading.gif) 0 0 no-repeat;
+	width:64px;
+	height:64px;
+}
+.ie8 .loading > .icon-spinner:before, .ie9 .loading > .icon-spinner:before {
+	content: "";
+}
+//Tabs
+.nav-tabs {
+	margin-bottom: @grid-gutter-width/2;
+}
+.nav-tabs > li > a {
+	border: 1px solid @pearsonBorder;
+	background-color: @pearsonGrayBackground;
+	color: @gray;
+	&:hover, &:focus {
+		border: 1px solid @pearsonBorder;
+		background-color: @pearsonGrayBackgroundDark;
+		color:@gray-dark;
+	}
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+	background-color: @white;
+}
+.nav-tabs > li.open > a,
+.nav-tabs > li.open > a:hover,
+.nav-tabs > li.open > a:focus {
+	color:@white;
+	border: 1px solid @pearsonBorderDark;
+	background-color: @pearsonBorderDark;
+}

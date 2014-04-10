@@ -1,0 +1,316 @@
+.pstrap {
+	div {
+		margin-bottom: @grid-gutter-width/2;
+	}
+	fieldset {
+		border:1px solid @input-border;
+		border-radius: @input-border-radius;
+		padding: @grid-gutter-width/2 @grid-gutter-width/2 0 @grid-gutter-width/2;
+		legend {
+			width: auto;
+			padding: 0 @grid-gutter-width/2;
+			//margin-left: @grid-gutter-width/2;
+			margin-bottom: 0;
+			border-bottom: none;
+		}
+	}
+	h2 {
+		border-bottom: 1px solid @input-border;
+		padding-bottom: 10px;
+		margin-bottom: @grid-gutter-width/2;
+	}
+	select,
+	textarea,
+	input[type="text"],
+	input[type="password"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="date"],
+	input[type="month"],
+	input[type="time"],
+	input[type="week"],
+	input[type="number"],
+	input[type="email"],
+	input[type="url"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="color"] {
+		display: block;
+		width: 100%;
+		height: @input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+		padding: @padding-base-vertical @padding-base-horizontal;
+		font-size: @font-size-base;
+		line-height: @line-height-base;
+		color: @input-color;
+		vertical-align: middle;
+		background-color: @input-bg;
+		border: 1px solid @input-border;
+		border-radius: @input-border-radius;
+		.box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+		.transition(~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
+		
+		// Customize the `:focus` state to imitate native WebKit styles.
+		.form-control-focus();
+		
+		// Disabled and read-only inputs
+		// Note: HTML5 says that controls under a fieldset > legend:first-child won't
+		// be disabled if the fieldset is disabled. Due to implementation difficulty,
+		// we don't honor that edge case; we style them as disabled anyway.
+		&[disabled],
+		&[readonly],
+		fieldset[disabled] & {
+			cursor: not-allowed;
+			background-color: @input-bg-disabled;
+		}
+		
+		// Placeholder text gets special styles because when browsers invalidate entire
+		// lines if it doesn't understand a selector/
+		.placeholder();
+	}
+	// Make multiple select elements height not fixed
+	select[multiple],
+	select[size] {
+		height: auto;
+	}
+	// Reset height for textareas
+	textarea {
+		height: auto;
+	}
+	label {
+		width:100%;
+		font-weight:bold;
+	}
+	.error-block {
+		display: block; // account for any element using error-block
+  		margin-top: 5px;
+  		margin-bottom: 10px;
+  		color: @state-danger-text;
+  	}
+  	.form-control-static {
+  		display: inline-block; // account for any element using form-control-static
+  	}
+  	.radio,
+  	.checkbox,
+  	.radio-inline,
+  	.checkbox-inline {
+    	margin-top: 0;
+    	padding-top: (@padding-base-vertical + 1); // Default padding plus a border
+    	fieldset {
+    		border:0;
+    		margin:0;
+    		margin-top: -7px;
+    		padding: 5px 0 0 0;
+    		legend {
+				width: auto;
+				font-size: @font-size-base;
+				font-weight:bold;
+				padding: 0;
+				margin: 0;
+				margin-left: -20px;
+				border-bottom: none;
+			}
+    	}
+    	label {
+    		font-weight:normal;
+    	}
+  	}
+  	// For input group form elements, such as the datepicker
+	.input-group {
+		input[type="text"],
+		input[type="password"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="date"],
+		input[type="month"],
+		input[type="time"],
+		input[type="week"],
+		input[type="number"],
+		input[type="email"],
+		input[type="url"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="color"],
+		input[type="file"] {
+			border-top-right-radius:0;
+			border-bottom-right-radius:0;
+		}
+		// Remove the rounded border on the left side of the input if there is an left side addon element
+		.input-group-addon + input[type="text"],
+		.input-group-addon + input[type="password"],
+		.input-group-addon + input[type="datetime"],
+		.input-group-addon + input[type="datetime-local"],
+		.input-group-addon + input[type="date"],
+		.input-group-addon + input[type="month"],
+		.input-group-addon + input[type="time"],
+		.input-group-addon + input[type="week"],
+		.input-group-addon + input[type="number"],
+		.input-group-addon + input[type="email"],
+		.input-group-addon + input[type="url"],
+		.input-group-addon + input[type="search"],
+		.input-group-addon + input[type="tel"],
+		.input-group-addon + input[type="color"],
+		.input-group-addon + input[type="file"] {
+			border-top-left-radius:0;
+			border-bottom-left-radius:0;
+		}
+		// Remove the left border of buttons so the border between input isn't 2px wide
+		.input-group-btn > .btn {
+			border-left: 1px solid transparent;
+		}
+	}
+  	// Form control feedback states
+	// Apply contextual and semantic states to individual form controls.
+  	.has-error {
+  		.form-validation(@state-danger-text; @state-danger-text; @state-danger-bg);
+  	}
+  	.has-success {
+  		.form-validation(@state-success-text; @state-success-text; @state-success-bg);
+  	}
+  	.has-warning {
+  		.form-validation(@state-warning-text; @state-warning-text; @state-warning-bg);
+  	}
+}
+/* Extra small devices (phones, up to 480px) */
+@media (max-width: @screen-xs-max) {
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm) {
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md) {
+	.pstrap {
+		fieldset {
+			padding:0;
+			padding: @grid-gutter-width/2 0 0 0;
+			legend {
+				margin-left: @grid-gutter-width/2;
+			}
+		}
+		select,
+		textarea,
+		input[type="text"],
+		input[type="password"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="date"],
+		input[type="month"],
+		input[type="time"],
+		input[type="week"],
+		input[type="number"],
+		input[type="email"],
+		input[type="url"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="color"],
+		input[type="file"] {
+			display:inline-block;
+			width:60%;
+		}
+		label {
+			width:20%;
+			text-align:right;
+			padding-right: @grid-gutter-width;
+		}
+		> .btn {
+			margin-left:20%;
+		}
+		.checkbox,
+		.error-block,
+		.help-block,
+		.radio {
+			margin-left:20%;
+		}
+		.error-block,
+		.form-control-static,
+		.help-block {
+			margin-bottom:0;
+			padding-left:4px;
+		}
+		// For input group form elements, such as the datepicker
+		.input-group {
+			display: inline-table;
+			margin-bottom: 0;
+			width: 60%;
+			input[type="text"],
+			input[type="password"],
+			input[type="datetime"],
+			input[type="datetime-local"],
+			input[type="date"],
+			input[type="month"],
+			input[type="time"],
+			input[type="week"],
+			input[type="number"],
+			input[type="email"],
+			input[type="url"],
+			input[type="search"],
+			input[type="tel"],
+			input[type="color"],
+			input[type="file"] {
+				display: table-cell;
+				width: 100%;
+			}
+		}
+	}
+	//Adjust some widths for pages that include sidenav
+	.col-md-9 .pstrap {
+		select,
+		textarea,
+		input[type="text"],
+		input[type="password"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="date"],
+		input[type="month"],
+		input[type="time"],
+		input[type="week"],
+		input[type="number"],
+		input[type="email"],
+		input[type="url"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="color"],
+		input[type="file"] {
+			width:65%;
+		}
+		label {
+			width:30%;
+		}
+		> .btn {
+			margin-left:30%;
+		}
+		.checkbox,
+		.error-block,
+		.help-block,
+		.radio {
+			margin-left:30%;
+		}
+		// For input group form elements, such as the datepicker
+		.input-group {
+			width: 65%;
+			input[type="text"],
+			input[type="password"],
+			input[type="datetime"],
+			input[type="datetime-local"],
+			input[type="date"],
+			input[type="month"],
+			input[type="time"],
+			input[type="week"],
+			input[type="number"],
+			input[type="email"],
+			input[type="url"],
+			input[type="search"],
+			input[type="tel"],
+			input[type="color"],
+			input[type="file"] {
+				display: table-cell;
+				width: 100%;
+			}
+		}
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg) {
+}

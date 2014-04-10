@@ -1,0 +1,17 @@
+{
+    "build_dir" : "www-root",
+    "default_exclude": ["angular", "angular-route", "domReady", "jquery", "pearson-bootstrap", "modernizr", "pearsonstrap"],
+    "pages": [
+        {
+            "name": "samplepage/js/main",
+            "exclude": ["angular", "angular-route", "domReady", "jquery", "pearson-bootstrap", "modernizr", "pearsonstrap"]
+        }
+    ],
+    "components": [
+        {
+            "name": "component1",
+            "exclude": []
+        }
+    ]
+
+}

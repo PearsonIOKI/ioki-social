@@ -1,0 +1,9 @@
+.idea/
+.git
+*.pyc
+*.swp
+*.*~
+node_modules/
+*.log
+bower_components/
+*db_settings.py

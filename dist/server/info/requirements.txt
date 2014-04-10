@@ -1,0 +1,6 @@
+fabric
+pylint
+pep8
+nosexcover
+tornado
+motor

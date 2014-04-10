@@ -1,0 +1,24 @@
+PearsonStrap Version: 0.9.0
+Bootstrap Version: 3.0.0
+
+Notes:
+* Initial port of PearsonStrap to Bootstrap 3.x
+* Does not include application layout/CSS, which will be included in PearsonStrap 1.0.0
+
+Fixes:
+PSTRAP-40: Migrate PearsonStrap to Bootstrap 3.0 (including child tickets)
+___
+
+PearsonStrap Version: 0.6.1
+Bootstrap Version: 2.3.1
+
+Notes:
+* Joel has added a new "no-wrap" class to be used on divs containing multiple buttons in dashboard views
+* The HTML structure of "Filter" bars have changed to be more responsive
+
+Fixes:
+PSTRAP-32: Navbar shifting in small viewports in IE8, IE9, and Firefox
+PSTRAP-33: Update "Filters" bar to be more responsive
+PSTRAP-34: Pageslide code updated to include more "active" links URL patterns
+PSTRAP-35: Active and hover links in IE8 and IE9 do not match PearsonStrap colors
+PSTRAP-36: Sidebar links flicker on hover in IE8 and IE9

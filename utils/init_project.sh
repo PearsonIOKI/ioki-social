@@ -6,10 +6,10 @@
 # Jenkin's build process.
 
 
-PROJECT_NAME=i-social
+#PROJECT_NAME=i-social
 
 
-cd $PROJECT_NAME
+#cd $PROJECT_NAME
 
 ./utils/init_server.sh
-./utils/init_client.sh
+#./utils/init_client.sh

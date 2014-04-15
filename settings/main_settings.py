@@ -1,6 +1,6 @@
 import os
 
-from settings.db_settings import CONNECTION_DATA
+# from settings.db_settings import CONNECTION_DATA
 
 APP_PORT = 8090
 

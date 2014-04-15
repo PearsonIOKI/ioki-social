@@ -9,7 +9,7 @@ PATH_TO_REQUIREMENTS=dist/server/info
 
 
 # Create virtualenv
-virtualenv $ROOT_PATH/$VENV_NAME
+/usr/local/bin/virtualenv $ROOT_PATH/$VENV_NAME
 
 # turn on venv
 . $ROOT_PATH/$VENV_NAME/bin/activate

@@ -3,7 +3,7 @@
 # Initial script for server.
 
 
-ROOT_PATH=..
+ROOT_PATH=.
 VENV_NAME=isocial-venv
 PATH_TO_REQUIREMENTS=dist/server/info
 

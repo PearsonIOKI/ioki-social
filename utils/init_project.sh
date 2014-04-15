@@ -12,4 +12,4 @@
 #cd $PROJECT_NAME
 
 ./utils/init_server.sh
-#./utils/init_client.sh
+./utils/init_client.sh

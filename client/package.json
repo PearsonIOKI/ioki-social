@@ -1,4 +1,10 @@
 {
+    "repository" :
+    {
+        "type" : "git",
+        "url" : "https://github.com/PearsonIOKI/ioki-social.git"
+    },
+    "private": true,
     "name": "IOKIsocial",
     "version": "0.1.0",
     "author": {

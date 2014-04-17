@@ -3,8 +3,7 @@
 IOKI Social
 ====================
 
-IOKI Social is CMS application that helps organize life and work in company. This application will help workers get information about their work and communicate with others.
-
+IOKI Social is a CMS application that helps organizing life and work at a company. This application will facilitate providing employees with all the necessary information about the company, their work, etc. Furthermore, it will serve as means of internal communication.
 
 Table of Contents
 -----------------
@@ -15,15 +14,12 @@ Table of Contents
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Links](#links)
-- [Contributing](#contributing)
 - [License](#license)
 - [Thank you](#thank-you)
 
 Origin
 -----------
-This project was born out of a strong desire to better organize life and work in office. It will be strongly integrated with company. The aim of this app is to improve working cycle of all employees in company.
-
-
+This project was born out of a strong desire to improve the organization of life and work at the office. It will be strongly integrated with the company's day-to-day life. The ultimate aim of this app is to enahnce the working cycle of all employees in the company.
 
 Features
 -----------
@@ -32,7 +28,7 @@ IOKI Social features :
 
 * Open Source,
 * 'twitter like' communication,
-* building plans,
+* office map,
 * attendance list,
 * holidays schedule,
 * projects Dashboard,
@@ -49,15 +45,12 @@ IOKI Social features :
 * timesheets,
 * notifications.
 
-Getting Started
-==========
-
 
 Installation
 ------------
 
-1. Download and install required environment
-http://www.pearson.com/
+1. Pre-Requirements
+
 *    download Vagrant
 <http://www.vagrantup.com/downloads.html>
 
@@ -77,7 +70,7 @@ Install plugin for vagrant
 vagrant plugin install vagrant-vbguest
 ```
 
-2. Create new folder, clone GitHub repository into that and configure it
+2. Get project
 
 ```bash
 mkdir ioki-social-project
@@ -142,16 +135,17 @@ http://127.0.0.1:8080/
 Other commands:
 
 ```bash
-# if there were any changes in vagrantfile, run this
+# if there were any changes changes in provision section
 vagrant provision
-# if something went wrong, you can reload vagrant
-vagrant reload
+# or reboot with provision
+vagrant reload --provision
 ```
 
 Commit changes and push it to yours GitHub fork
 
 ```bash
-git push origin master
+git push
+# git push origin dev
 ```
 Last thing you need to do is to open 'Pull request' of your changes on GitHub to the main repository.
 
@@ -194,27 +188,7 @@ License
 
 IOKI Social is licensed under the MIT License
 
-The MIT License (MIT)
-
-Copyright (c) 2014 IOKI Social
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+[License](../master/LICENSE.txt)
 
 <http://opensource.org/licenses/mit-license.php>
 

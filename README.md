@@ -49,14 +49,11 @@ IOKI Social features :
 Installation
 ------------
 
-1. Pre-Requirements
+### 1. Pre-Requirements
 
-*    download Vagrant
-<http://www.vagrantup.com/downloads.html>
+*    download Vagrant <http://www.vagrantup.com/downloads.html>
 
-*    download VirtualBox
-
-<https://www.virtualbox.org/wiki/Downloads>
+*    download VirtualBox <https://www.virtualbox.org/wiki/Downloads>
 
 check VirtualBox version to ensure that it was installed  correctly, if there you see error,follow instructions to resolve it
 
@@ -70,7 +67,7 @@ Install plugin for vagrant
 vagrant plugin install vagrant-vbguest
 ```
 
-2. Get project
+### 2. Get project
 
 ```bash
 mkdir ioki-social-project
@@ -101,14 +98,17 @@ You could now pull changes from main repository
 git pull --rebase upstream master
 ```
 
-3. Run Vagrant
-Vagrant will install and set up everything for you, just run these command:
+### 3. Run Vagrant
+
+Vagrant will install and set up everything for you, just run this command:
 
 ```bash
 vagrant up
 ```
 
-4. That's almost everything. You can now start developing project. Run this command:
+### 4. That's almost everything
+
+ You can now start developing project. Run this command:
 
 ```bash
 vagrant ssh

@@ -168,6 +168,12 @@ module.exports = function (grunt) {
             dev: {
                 browsers: ['PhantomJS', 'Firefox', 'Chrome'],
                 reporters: 'progress'
+            },
+            travis: {
+                browsers: ['PhantomJS'],
+                singleRun: true,
+                reporters: 'progress'
+
             }
         }
     });
@@ -192,5 +198,10 @@ module.exports = function (grunt) {
 
     grunt.registerTask('testDev', ['jshint:ci', 'karma:dev' ]);
 
+    grunt.registerTask('testTravis', ['jshint:ci', 'karma:travis' ]);
+
     grunt.registerTask('default', ['clean', 'build', 'testDev']);
+
+    grunt.registerTask('travis', ['clean', 'build', 'testTravis']);
+
 };

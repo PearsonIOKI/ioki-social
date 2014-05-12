@@ -1,0 +1,16 @@
+language: python
+python:
+  - "2.7"
+before_install: npm install -g grunt-cli
+
+# command to install dependencies
+install:
+  - pip install -r dist/server/info/requirements.txt
+  - cd client && npm install
+
+
+# command to run tests
+script:
+  - grunt travis
+  - cd ../ && nosetests
+

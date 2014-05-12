@@ -9,3 +9,4 @@ bower_components/
 *db_settings.py
 .vagrant/
 isocial-venv/
+www-root/

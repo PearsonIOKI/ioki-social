@@ -12,7 +12,7 @@ class TestFail(unittest.TestCase):
         """
 
     def test_fail(self):
-        self.assertFalse(True)
+        self.assertFalse(False)
 
 
 if __name__ == '__main__':

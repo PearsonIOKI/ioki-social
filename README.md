@@ -12,6 +12,7 @@ Table of Contents
 - [Features](#features)
 - [Installation](#installation)
 - [Documentation](#documentation)
+- [Continuous Integration](#continuous-integration)
 - [Contributing](#contributing)
 - [Links](#links)
 - [License](#license)
@@ -156,6 +157,13 @@ Documentation
 
 Documentation is available on the [wiki](https://github.com/PearsonIOKI/ioki-social/wiki).
 
+
+Continuous Integration
+---------
+
+Travis CI is a hosted, distributed continuous integration service used to build and test project. Travis CI automatically detects when a commit has been made and pushed to a GitHub repository that is using Travis CI, and each time this happens, it will try to build the project and run tests. This includes commits to all branches, not just to the master branch. Travis CI will also build and run pull requests. When that process has completed, it will notify a developer in the way it has been configured to do. Travis will automatically run tests and notify when tests are failing.
+
+<https://travis-ci.org/PearsonIOKI/ioki-social>
 
 Contributing
 -----------
